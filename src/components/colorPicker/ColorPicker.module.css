@@ -43,3 +43,41 @@
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .colorPicker {
+    gap: 15px;
+    margin-top: 8px;
+    padding: 8px;
+  }
+
+  .colorCircle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .selected::after {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .colorPicker {
+    gap: 3px;
+    margin-top: 5px;
+    padding: 5px;
+    margin-left: 6px;
+  }
+
+  .colorCircle {
+    width: 5px;
+    height: 5px;
+  }
+
+  .selected::after {
+    width: 5px;
+    height: 5px;
+  }
+}

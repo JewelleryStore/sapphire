@@ -52,6 +52,15 @@ const ProductCard = ({ product }) => {
           classes={{
             iconFilled: styles.iconFilled,
           }}
+          sx={{
+            fontSize: {
+              xs: "0.4rem",
+              sm: "1.2rem", // fontSize for small devices
+              md: "1.5rem", // fontSize for medium devices
+              lg: "1.8rem", // fontSize for large devices
+              xl: "2rem",
+            },
+          }}
         />
         <span className={styles.scoreText}>{`${scaledScore}/5`}</span>
       </div>

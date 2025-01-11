@@ -46,3 +46,39 @@
   font-weight: 100;
   margin-bottom: 10px;
 }
+
+@media (max-width: 600px) {
+  .productCard {
+    padding: 5px;
+  }
+
+  .productName {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+
+  .productPrice {
+    font-size: 6px;
+    margin-bottom: 2px;
+  }
+
+  .productImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .scoreText {
+    margin-left: 3px;
+    font-size: 6px;
+  }
+
+  .selectedColorName {
+    font-size: 6px;
+  }
+
+  .popularityStars .MuiRating-root {
+    font-size: 0.2em !important;
+  }
+}
