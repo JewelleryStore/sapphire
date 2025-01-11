@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Carousel.module.css";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const Carousel = ({ children }) => {
   const sliderRef = useRef(null);
@@ -39,21 +40,31 @@ const Carousel = ({ children }) => {
     sliderRef.current.slickNext();
   };
 
+  const isLoading = !children || React.Children.count(children) === 0;
+
   return (
     <div className={styles.carouselWrapper}>
-      <div className={styles.prevArrow} onClick={previous}>
-        <ArrowBackIos fontSize="large" />
-      </div>
-      <Slider ref={sliderRef} {...settings} className={styles.slider}>
-        {React.Children.map(children, (child) => (
-          <div className={styles.carouselItem}>
-            {React.cloneElement(child, { className: styles.carouselImage })}
+      {isLoading ? (
+        <div className={styles.loader}>
+          <CircularProgress />
+        </div>
+      ) : (
+        <>
+          <div className={styles.prevArrow} onClick={previous}>
+            <ArrowBackIos fontSize="large" />
           </div>
-        ))}
-      </Slider>
-      <div className={styles.nextArrow} onClick={next}>
-        <ArrowForwardIos fontSize="large" />
-      </div>
+          <Slider ref={sliderRef} {...settings} className={styles.slider}>
+            {React.Children.map(children, (child) => (
+              <div key={child.key} className={styles.carouselItem}>
+                {React.cloneElement(child, { className: styles.carouselImage })}
+              </div>
+            ))}
+          </Slider>
+          <div className={styles.nextArrow} onClick={next}>
+            <ArrowForwardIos fontSize="large" />
+          </div>
+        </>
+      )}
     </div>
   );
 };
