@@ -51,6 +51,42 @@
   right: 100px;
 }
 
+.scrollSlider {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Custom styles for the SliderComponent */
+.customSlider {
+  color: #d9d9d9;
+  height: 20px;
+}
+
+.customSlider .MuiSlider-thumb {
+  height: 20px;
+  width: 100px;
+  opacity: 1;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+.customSlider .MuiSlider-thumb:hover,
+.customSlider .MuiSlider-thumb:focus,
+.customSlider .MuiSlider-thumb:active {
+  box-shadow: none; /* Disable focus effect */
+}
+
+.customSlider .MuiSlider-track {
+  border: none;
+}
+
+.customSlider .MuiSlider-rail {
+  opacity: 0.5;
+  background-color: #d9d9d9;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .prevArrow,
