@@ -19,7 +19,7 @@ const ProductDisplay = () => {
     <div className={styles.productDisplay}>
       <Carousel>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.name} product={product} />
         ))}
       </Carousel>
     </div>
