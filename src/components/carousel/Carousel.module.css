@@ -1,0 +1,84 @@
+/* Carousel.module.css */
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.slider {
+  padding-left: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 50px;
+}
+
+.carouselItem {
+  padding: 10px;
+}
+
+
+/* Custom Arrow Styles */
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-200%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  z-index: 2;
+}
+
+.prevArrow {
+  left: 10px; /* Adjust as needed for margin */
+}
+
+.nextArrow {
+  right: 10px; /* Adjust as needed for margin */
+}
+
+.prevArrow:hover,
+.nextArrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .prevArrow,
+  .nextArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .prevArrow {
+    left: -20px;
+  }
+
+  .nextArrow {
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prevArrow,
+  .nextArrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .prevArrow {
+    left: -15px;
+  }
+
+  .nextArrow {
+    right: -15px;
+  }
+}

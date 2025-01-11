@@ -1,0 +1,48 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.productName {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; /* Medium */
+  margin-bottom: 5px;
+}
+
+.productPrice {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Regular */
+  margin-bottom: 5px;
+}
+
+.productImage {
+  height: 250px;
+  width: 250px; 
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.popularityStars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconFilled {
+  color: #e6ca97;
+  border: none;
+}
+
+.scoreText {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.selectedColorName {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
