@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Carousel.module.css";
+import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
 const Carousel = ({ children }) => {
   const sliderRef = useRef(null);
@@ -41,7 +42,7 @@ const Carousel = ({ children }) => {
   return (
     <div className={styles.carouselWrapper}>
       <div className={styles.prevArrow} onClick={previous}>
-        &#10094;
+        <ArrowBackIos fontSize="large" />
       </div>
       <Slider ref={sliderRef} {...settings} className={styles.slider}>
         {React.Children.map(children, (child) => (
@@ -51,7 +52,7 @@ const Carousel = ({ children }) => {
         ))}
       </Slider>
       <div className={styles.nextArrow} onClick={next}>
-        &#10095;
+        <ArrowForwardIos fontSize="large" />
       </div>
     </div>
   );
