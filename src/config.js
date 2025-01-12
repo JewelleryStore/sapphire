@@ -1,5 +1,6 @@
 const config = {
-  apiEndpoint: "https://amber-backend-37a6556b8ef0.herokuapp.com/api",
+  apiEndpoint:
+    process.env.REACT_APP_API_ENDPOINT || "http://localhost:3000/api",
 };
 
 export default config;
